@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Demande d’audit</title>
 
+  <!-- Lien vers ton CSS (si tu en as un) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="audit-section">
+    <h1>DEMANDE D'AUDIT OFFICIELLE</h1>
+    <p>Remplissez le formulaire ci-dessous pour lancer l’analyse.</p>
+
+    <!-- ✅ FORMULAIRE FORMSPREE -->
+    <form 
+      action="https://formspree.io/f/xzznnoql" 
+      method="POST"
+    >
+
+      <input type="text" name="nom_complet" placeholder="Nom complet" required>
+
+      <input type="text" name="club_division" placeholder="Club / Division">
+
+      <input type="email" name="email" placeholder="Email professionnel" required>
+
+      <input type="tel" name="telephone" placeholder="Téléphone / WhatsApp">
+
+      <input type="text" name="reseaux_sociaux" placeholder="Réseaux sociaux">
+
+      <select name="objectif" required>
+        <option value="">Objectif principal</option>
+        <option value="audit">Audit complet</option>
+        <option value="progression">Progression individuelle</option>
+        <option value="recrutement">Visibilité recrutement</option>
+      </select>
+
+      <textarea name="message" placeholder="Message pour le staff"></textarea>
+
+      <button type="submit">ENVOYER MA DEMANDE 🚀</button>
+
+    </form>
+    <!-- ✅ FIN FORMULAIRE -->
+
+  </section>
+
+</body>
+</html>
