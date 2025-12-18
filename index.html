@@ -405,41 +405,68 @@
             </form>
         </div>
     </section>
-<footer>
-    <div class="socials-footer">
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-    </div>
-    <p>&copy; 2024 BENAKICK AGENCY. Tous droits réservés.</p>
+<footer id="main-footer">
+        <div class="socials-footer">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2024 BENAKICK AGENCY. Tous droits réservés.</p>
+        
+        <p style="margin-top: 15px;">
+            <a href="cgv.html" class="legal-link">
+                Mentions Légales & CGV
+            </a>
+        </p>
+    </footer>
 
-    <p style="margin-top: 15px;">
-        <a href="./cgv.html" target="_blank" class="legal-link">
-            MENTIONS LÉGALES & CGV
-        </a>
-    </p>
-</footer>
+    <style>
+        #main-footer {
+            padding: 60px 5%;
+            text-align: center;
+            border-top: 1px solid #222;
+            background-color: #050505; /* Assure que le fond est opaque */
+            
+            /* ESSENTIEL : Ces 2 lignes permettent de rendre le lien cliquable */
+            position: relative;
+            z-index: 9999; 
+        }
 
-<style>
-    /* Le style pour que le lien soit beau et visible */
-    .legal-link {
-        color: #444; 
-        text-decoration: none; 
-        font-size: 0.75rem; 
-        font-family: 'Poppins', sans-serif; 
-        transition: 0.3s; 
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
+        .socials-footer {
+            margin-bottom: 20px;
+        }
 
-    /* Au survol, ça devient vert néon */
-    .legal-link:hover {
-        color: #00ff88 !important;
-        text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
-        cursor: pointer;
-    }
-</style>
-</style>
+        .socials-footer a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .socials-footer a:hover {
+            color: #00ff88;
+            transform: translateY(-3px);
+        }
+
+        .legal-link {
+            color: #555;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            display: inline-block;
+            padding: 10px; /* Agrandit la zone de clic */
+            cursor: pointer !important; /* Force l'apparition de la main */
+        }
+
+        .legal-link:hover {
+            color: #00ff88 !important;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+        }
+    </style>
 </html>
 
 
