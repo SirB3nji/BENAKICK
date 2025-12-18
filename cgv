@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENAKICK | Mentions Légales & Conditions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Rajdhani:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --accent: #00ff88;
+            --text-main: #ffffff;
+            --text-muted: #aaaaaa;
+            --card-bg: #0f0f0f;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 60px 5% 20px;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+
+        h1 { font-family: 'Rajdhani'; font-size: 3rem; color: var(--accent); margin: 0; }
+        h2 { font-family: 'Rajdhani'; color: var(--accent); border-left: 4px solid var(--accent); padding-left: 15px; margin-top: 40px; }
+        h3 { color: #fff; margin-top: 25px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 5%; }
+        
+        .legal-box {
+            background: var(--card-bg);
+            padding: 30px;
+            border: 1px solid #222;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+
+        p, li { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px; }
+        ul { padding-left: 20px; }
+
+        .back-home {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--accent);
+            text-decoration: none;
+            font-family: 'Rajdhani';
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #222; font-size: 0.8rem; color: #555; }
+        
+        strong { color: #fff; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-home">← Retour au terrain</a>
+        <h1>CONDITIONS GÉNÉRALES</h1>
+        <p>BENAKICK AGENCY - Version 1.0 - 2024</p>
+    </header>
+
+    <div class="container">
+
+        <section class="legal-box">
+            <h2>1. CONDITIONS GÉNÉRALES D'UTILISATION (CGU)</h2>
+            <p>L'utilisation du site <strong>BENAKICK</strong> implique l'acceptation pleine et entière des conditions ci-après.</p>
+            
+            <h3>Objet</h3>
+            <p>Le présent document a pour objet de définir les modalités d'accès et d'utilisation du site BENAKICK par l'Utilisateur.</p>
+
+            <h3>Accès au service</h3>
+            <p>Le site est accessible gratuitement en tout lieu à tout Utilisateur ayant un accès à Internet. Tous les frais supportés par l'Utilisateur pour accéder au service (matériel informatique, logiciels, connexion Internet, etc.) sont à sa charge.</p>
+
+            <h3>Propriété Intellectuelle</h3>
+            <p>Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de BENAKICK.</p>
+        </section>
+
+        <section class="legal-box">
+            <h2>2. CONDITIONS GÉNÉRALES DE VENTE (CGV)</h2>
+            <p>Les présentes conditions visent à définir les relations contractuelles entre l'agence <strong>BENAKICK</strong> et le Client (joueur professionnel, agent, ou club).</p>
+
+            <h3>Art 1. Prestations</h3>
+            <p>BENAKICK propose des services de Community Management, création de contenu (photo/vidéo), stratégie d'image et mise en relation commerciale. Le détail de la prestation est défini dans le devis ou contrat spécifique signé par le client.</p>
+
+            <h3>Art 2. Tarifs et Paiement</h3>
+            <p>Les tarifs sont indiqués en Euros. BENAKICK se réserve le droit de modifier ses prix à tout moment. Les prestations sont facturées sur la base des tarifs en vigueur au moment de la signature du contrat. Le paiement s'effectue par virement bancaire sauf accord contraire.</p>
+            <ul>
+                <li><strong>Abonnement mensuel :</strong> Prélèvement en début de mois.</li>
+                <li><strong>Retards :</strong> Tout retard de paiement pourra donner lieu à une suspension immédiate des services.</li>
+            </ul>
+
+            <h3>Art 3. Engagements du Joueur</h3>
+            <p>Pour la réussite de la stratégie, le Client s'engage à fournir les éléments nécessaires (accès aux comptes, photos, vidéos de match) dans les délais impartis. Le joueur reste responsable de ses propos tenus lors de ses apparitions publiques non supervisées par l'agence.</p>
+
+            <h3>Art 4. Droit à l'image</h3>
+            <p>Le Client autorise l'agence BENAKICK à utiliser son nom, son logo et les contenus créés dans le cadre de sa communication propre (Portfolio, réseaux sociaux de l'agence), sauf mention contraire explicite.</p>
+
+            <h3>Art 5. Confidentialité</h3>
+            <p>L'agence s'engage à une confidentialité totale concernant les informations stratégiques, les montants des transferts, les clauses de sponsoring ou toute information privée partagée par le Client.</p>
+
+            <h3>Art 6. Résiliation</h3>
+            <p>Sauf mention spécifique sur le contrat, tout abonnement est conclu pour une durée de 3 mois minimum. Passé ce délai, la résiliation est possible avec un préavis de 30 jours envoyé par mail ou courrier.</p>
+        </section>
+
+        <section class="legal-box">
+            <h2>3. POLITIQUE DE CONFIDENTIALITÉ (RGPD)</h2>
+            <p>BENAKICK s'engage à ce que la collecte et le traitement de vos données soient conformes au RGPD.</p>
+            <ul>
+                <li><strong>Données collectées :</strong> Nom, Email, Téléphone, Réseaux sociaux, Club actuel.</li>
+                <li><strong>Finalité :</strong> Analyse de profil (Audit), contact commercial et gestion de projet.</li>
+                <li><strong>Conservation :</strong> Les données sont conservées pendant une durée maximale de 3 ans après le dernier contact.</li>
+                <li><strong>Vos droits :</strong> Vous disposez d'un droit d'accès, de rectification et d'opposition sur vos données personnelles par simple mail à l'agence.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BENAKICK AGENCY | Spécialiste Image & Influence Football</p>
+    </footer>
+
+</body>
+</html>
