@@ -405,31 +405,27 @@
             </form>
         </div>
     </section>
-
     <footer>
-        <div class="socials-footer">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        </div>
-        <p>&copy; 2024 BENAKICK AGENCY. Tous droits réservés.</p>
-    </footer>
+    <div class="socials-footer">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2024 BENAKICK AGENCY. Tous droits réservés.</p>
+    
+    <p style="margin-top: 15px;">
+        <a href="cgv.html" style="color: #444; text-decoration: none; font-size: 0.75rem; font-family: 'Poppins', sans-serif; transition: 0.3s; letter-spacing: 1px;">
+            MENTIONS LÉGALES & CGV
+        </a>
+    </p>
+</footer>
 
-    <script>
-        // Effet Spotlight qui suit la souris
-        const spotlight = document.getElementById('spotlight');
-        document.addEventListener('mousemove', (e) => {
-            const x = e.clientX;
-            const y = e.clientY;
-            spotlight.style.setProperty('--x', x + 'px');
-            spotlight.style.setProperty('--y', y + 'px');
-        });
-
-        // Suppression du loader après l'animation
-        setTimeout(() => {
-            const loader = document.getElementById('loader');
-            loader.style.pointerEvents = 'none';
-        }, 3500); 
-    </script>
-</body>
+<style>
+    /* Petit effet de survol pour le lien */
+    footer p a:hover {
+        color: var(--accent) !important;
+        text-shadow: 0 0 10px var(--accent-glow);
+    }
+</style>
 </html>
+
