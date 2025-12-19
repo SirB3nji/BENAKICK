@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENAKICK | Service Détail</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Rajdhani:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --bg-color: #050505; --accent: #00ff88; --text-main: #ffffff; --card-bg: #0f0f0f; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg-color); color: var(--text-main); margin: 0; }
+        header { padding: 80px 5%; text-align: center; border-bottom: 1px solid #222; background: radial-gradient(circle at center, #111, #050505); }
+        .back-btn { color: var(--accent); text-decoration: none; font-family: 'Rajdhani'; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 20px; }
+        h1 { font-family: 'Rajdhani'; font-size: 3.5rem; text-transform: uppercase; margin: 0; }
+        h1 span { color: var(--accent); }
+        .content { max-width: 900px; margin: 60px auto; padding: 0 5%; }
+        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .info-box h2 { font-family: 'Rajdhani'; color: var(--accent); }
+        .info-box p { color: #888; line-height: 1.8; }
+        .feature-list { list-style: none; padding: 0; margin-top: 20px; }
+        .feature-list li { margin-bottom: 10px; padding-left: 25px; position: relative; }
+        .feature-list li::before { content: "⚡"; position: absolute; left: 0; color: var(--accent); }
+        .cta-section { margin-top: 50px; text-align: center; padding: 40px; background: var(--card-bg); border: 1px solid var(--accent); }
+        .btn-action { display: inline-block; padding: 15px 35px; background: var(--accent); color: #000; font-family: 'Rajdhani'; font-weight: 800; text-decoration: none; clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); }
+        @media (max-width: 768px) { .details-grid { grid-template-columns: 1fr; } h1 { font-size: 2.5rem; } }
+
+        /* SERVICE LAYOUT */        .case-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin-top:20px; }
+        .case { background:#0d0d0d; padding:20px; border-radius:8px; border:1px solid #232323; }
+        .coach { margin-top:20px; background:#0a0a0a; padding:15px; border-radius:6px; border:1px solid #222; }
+        .subtitle { color: #bbb; margin-top: 10px; font-size: 1rem; }
+        .service-intro { margin: 60px auto; max-width: 1100px; padding: 0 5%; }
+        .features { margin-top: 50px; display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 20px; }
+        .feature-card { background: #0a0a0a; padding: 25px; border: 1px solid #222; border-radius: 8px; color: #ddd; }
+        .process { margin-top: 20px; }
+        .step-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 20px; }
+        .step { background: #111; padding: 18px; border-radius: 8px; text-align:center; }
+        .step .num { font-size: 1.4rem; font-weight: 800; color: var(--accent); margin-bottom:10px; }
+        @media (max-width: 768px) { .step-grid { grid-template-columns: 1fr; } }
+
+        /* FOOTER */
+        #main-footer {
+            padding: 60px 5%; text-align: center; border-top: 1px solid #222;
+            background-color: #050505; position: relative; z-index: 9999; 
+        }
+        .socials-footer { margin-bottom: 20px; }
+        .socials-footer a {
+            color: #fff; font-size: 1.5rem; margin: 0 15px; transition: 0.3s; display: inline-block;
+        }
+        .socials-footer a:hover { color: var(--accent); transform: translateY(-3px); }
+        
+        .legal-link {
+            color: #555; text-decoration: none; font-size: 0.75rem; font-family: 'Poppins', sans-serif;
+            text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;
+            display: inline-block; padding: 10px; cursor: pointer !important;
+        }
+        .legal-link:hover { color: var(--accent) !important; text-shadow: 0 0 10px rgba(0, 255, 136, 0.4); }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-btn">← Retour au terrain</a>
+        <h1>STORYTELLING</h1>
+        <p class="subtitle">Construisons une histoire qui crée de la valeur — engagement, rétention et monétisation.</p>
+    </header>
+
+    <main class="content">
+        <section class="service-intro">
+            <div class="details-grid">
+                <div class="info-box">
+                    <h2>POURQUOI LE STORYTELLING ?</h2>
+                    <p>Un bon storytelling transforme des followers passifs en communauté engagée et crée des opportunités commerciales durables.</p>
+                    <ul class="feature-list">
+                        <li>Identification d'angles différenciants</li>
+                        <li>Formats récurrents & séries à fort potentiel</li>
+                        <li>Scénarios optimisés pour conversion</li>
+                    </ul>
+                </div>
+                <div style="background: #222; height: 320px; border-radius: 10px; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=1200" alt="Story" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+                </div>
+            </div>
+        </section>
+
+        <section class="case-studies">
+            <h2 style="margin-top:36px;">Cas concrets</h2>
+            <div class="case-grid">
+                <div class="case"><strong>Campagne 'Match Day Series'</strong><p>+220% d'engagement en 3 mois grâce à des séries stories & Reels thématiques.</p></div>
+                <div class="case"><strong>Série 'Backstage'</strong><p>Fidélisation renforcée et hausse des interactions avec contenu behind-the-scenes.</p></div>
+                <div class="case"><strong>Format 'Micro-Tutorial'</strong><p>Création de tutoriels courts qui ont converti en sponsoring.</p></div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>Ateliers & Formation</h3>
+                <p>Sessions pratiques pour maîtriser la prise de parole et écrire des captions qui convertissent.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Rédaction & Scripts</h3>
+                <p>Scripts courts pour Reels, captions puissantes et CTA stratégiques.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Tests & Optimisation</h3>
+                <p>Itérations basées sur données pour améliorer reach & conversion.</p>
+            </div>
+        </section>
+
+        <section class="coach">
+            <h3>Coaching Individuel</h3>
+            <p>Session 1:1 pour affiner le ton, préparer interviews et gérer les prises de parole sensibles.</p>
+        </section>
+
+        <div class="cta-section">
+            <h3 style="font-family: 'Rajdhani';">PRÊT À CONSTRUIRE TON HISTOIRE ?</h3>
+            <p style="margin-bottom: 20px;">On propose un atelier créatif gratuit pour définir 3 angles prioritaires.</p>
+            <a href="index.html#audit" class="btn-action">Réserver un Atelier</a>
+        </div>
+    </main>
+
+    <footer id="main-footer">
+        <div class="socials-footer">
+            <a href="https://instagram.com/benakick" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 BENAKICK AGENCY. Tous droits réservés.</p>
+        
+        <p style="margin-top: 15px;">
+            <a href="cgv.html" class="legal-link">
+                Mentions Légales & CGV
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
