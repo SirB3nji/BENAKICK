@@ -23,14 +23,19 @@
             --secondary: #1a1a1a;
         }
 
+        /* IMPORTANT : Empêche le scroll horizontal causé par les éléments qui dépassent */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0; padding: 0; box-sizing: border-box; cursor: default;
+        }
+
         html { scroll-behavior: smooth; }
-        * { margin: 0; padding: 0; box-sizing: border-box; cursor: default; }
 
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            overflow-x: hidden;
         }
 
         h1, h2, h3, .nav-logo { font-family: 'Rajdhani', sans-serif; text-transform: uppercase; }
@@ -109,24 +114,24 @@
             text-transform: uppercase; font-weight: 700;
         }
 
-        /* --- TICKER (BANDEAU CORRIGÉ) --- */
+        /* --- TICKER (CORRIGÉ & STABILISÉ) --- */
         .ticker-wrap {
             background: var(--accent); 
             color: #000; 
             padding: 15px 0; 
             overflow: hidden;
             
-            /* MODIFICATIONS POUR CORRIGER LE TROU À DROITE */
-            width: 120%;        /* Beaucoup plus large que l'écran pour éviter les bords blancs */
-            margin-left: -10%;  /* On décale vers la gauche pour recentrer le tout */
-            transform: rotate(-2deg); /* L'angle reste le même */
+            /* LA CORRECTION EST ICI : */
+            width: 100%;
+            /* On tourne de -2deg ET on grossit de 1.1 (zoom) pour cacher les bords vides */
+            transform: rotate(-2deg) scale(1.1); 
             
             border-top: 2px solid #fff;
             border-bottom: 2px solid #fff;
-            margin-top: -60px; /* Remonté légèrement pour bien mordre sur le fond noir */
+            margin-top: -50px;
             z-index: 10; 
             position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Ombre pour donner du relief */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
         .ticker { display: flex; animation: ticker 25s linear infinite; white-space: nowrap; }
         .ticker-item { padding: 0 50px; font-weight: 800; font-family: 'Rajdhani'; font-size: 1.5rem; text-transform: uppercase; }
