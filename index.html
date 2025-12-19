@@ -23,19 +23,14 @@
             --secondary: #1a1a1a;
         }
 
-        /* IMPORTANT : Empêche le scroll horizontal causé par les éléments qui dépassent */
-        html, body {
-            overflow-x: hidden;
-            width: 100%;
-            margin: 0; padding: 0; box-sizing: border-box; cursor: default;
-        }
-
         html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: default; }
 
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
+            overflow-x: hidden;
         }
 
         h1, h2, h3, .nav-logo { font-family: 'Rajdhani', sans-serif; text-transform: uppercase; }
@@ -114,30 +109,17 @@
             text-transform: uppercase; font-weight: 700;
         }
 
-        /* --- TICKER (CORRIGÉ & STABILISÉ) --- */
+        /* --- TICKER --- */
         .ticker-wrap {
-            background: var(--accent); 
-            color: #000; 
-            padding: 15px 0; 
-            overflow: hidden;
-            
-            /* LA CORRECTION EST ICI : */
-            width: 100%;
-            /* On tourne de -2deg ET on grossit de 1.1 (zoom) pour cacher les bords vides */
-            transform: rotate(-2deg) scale(1.1); 
-            
-            border-top: 2px solid #fff;
-            border-bottom: 2px solid #fff;
-            margin-top: -50px;
-            z-index: 10; 
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: var(--accent); color: #000; padding: 15px 0; overflow: hidden;
+            transform: rotate(-2deg) scale(1.05); border-top: 2px solid #fff; border-bottom: 2px solid #fff;
+            margin-top: -50px; z-index: 10; position: relative;
         }
         .ticker { display: flex; animation: ticker 25s linear infinite; white-space: nowrap; }
         .ticker-item { padding: 0 50px; font-weight: 800; font-family: 'Rajdhani'; font-size: 1.5rem; text-transform: uppercase; }
         @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* --- SERVICES --- */
+        /* --- SERVICES (Modifié pour le bouton) --- */
         #services { padding: 100px 5%; background: var(--secondary); }
         .section-title { font-size: 3rem; margin-bottom: 60px; font-weight: 800; color: #fff; }
         .section-title span { color: var(--accent); }
@@ -148,14 +130,19 @@
         .service-card {
             background: #0a0a0a; padding: 40px; border: 1px solid #333;
             transition: 0.4s; position: relative; overflow: hidden;
+            
+            /* Flexbox pour aligner le bouton en bas */
             display: flex; flex-direction: column; align-items: flex-start;
         }
         .service-card:hover { border-color: var(--accent); transform: translateY(-10px); }
         .service-card i { font-size: 2.5rem; color: #fff; margin-bottom: 20px; transition: 0.4s; }
         .service-card:hover i { color: var(--accent); transform: scale(1.2); }
         .service-card h3 { font-size: 1.5rem; margin-bottom: 10px; color: #fff; }
+        
+        /* Le texte prend toute la place disponible pour pousser le bouton en bas */
         .service-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px; flex-grow: 1; }
 
+        /* Style du nouveau bouton "En savoir plus" */
         .btn-service {
             color: var(--accent);
             text-decoration: none;
