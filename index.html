@@ -23,11 +23,7 @@
             --secondary: #1a1a1a;
         }
 
-        /* L'effet de glissement (Smooth Scroll) se gère ici */
-        html {
-            scroll-behavior: smooth;
-        }
-
+        html { scroll-behavior: smooth; }
         * { margin: 0; padding: 0; box-sizing: border-box; cursor: default; }
 
         body {
@@ -39,31 +35,28 @@
 
         h1, h2, h3, .nav-logo { font-family: 'Rajdhani', sans-serif; text-transform: uppercase; }
 
-        /* --- LOADER (ENTRÉE TUNNEL) --- */
+        /* --- LOADER --- */
         #loader {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: #000; z-index: 9999;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             animation: slideUp 1s ease-in-out 2.5s forwards;
         }
-
         .loader-text {
             font-family: 'Rajdhani'; font-size: 3rem; font-weight: 800; color: transparent;
             -webkit-text-stroke: 1px var(--accent); opacity: 0;
             animation: blinkText 2s infinite;
         }
-
         .loader-bar {
             width: 0; height: 4px; background: var(--accent); margin-top: 20px;
             animation: loadBar 2s ease-in-out forwards;
             box-shadow: 0 0 20px var(--accent);
         }
-
         @keyframes loadBar { 0% { width: 0; } 100% { width: 200px; } }
         @keyframes slideUp { 0% { transform: translateY(0); } 100% { transform: translateY(-100%); } }
         @keyframes blinkText { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
 
-        /* --- SPOTLIGHT EFFECT --- */
+        /* --- SPOTLIGHT --- */
         #spotlight {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             pointer-events: none; z-index: 1;
@@ -76,17 +69,15 @@
             display: flex; justify-content: space-between; align-items: center;
             z-index: 1000; mix-blend-mode: difference;
         }
-
         .nav-logo { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: #fff; }
         .nav-logo span { color: var(--accent); }
 
-        /* --- HERO SECTION (LE TERRAIN 3D) --- */
+        /* --- HERO --- */
         header {
             height: 100vh; position: relative; overflow: hidden;
             display: flex; align-items: center; justify-content: center; text-align: center;
             perspective: 1000px;
         }
-
         .pitch-grid {
             position: absolute; width: 200%; height: 200%; bottom: -50%; left: -50%;
             background-image: 
@@ -98,27 +89,21 @@
             z-index: -1;
             mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 80%);
         }
-
         @keyframes moveGrid { 0% { transform: rotateX(60deg) translateY(0); } 100% { transform: rotateX(60deg) translateY(50px); } }
 
         .hero-content { z-index: 2; position: relative; }
-
         h1 {
             font-size: 6vw; line-height: 0.9; font-weight: 900;
-            text-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            margin-bottom: 20px;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 20px;
         }
-        
         h1 span {
             display: block; color: transparent;
             -webkit-text-stroke: 2px #fff; position: relative;
         }
-        
         h1 span.filled {
             color: #fff; -webkit-text-stroke: 0;
             text-shadow: 0 0 20px var(--accent-glow);
         }
-
         .hero-tag {
             font-size: 1.2rem; letter-spacing: 4px; color: var(--accent); margin-bottom: 30px;
             text-transform: uppercase; font-weight: 700;
@@ -130,7 +115,7 @@
             transform: rotate(-2deg) scale(1.05); border-top: 2px solid #fff; border-bottom: 2px solid #fff;
             margin-top: -50px; z-index: 10; position: relative;
         }
-        .ticker { display: flex; animation: ticker 15s linear infinite; white-space: nowrap; }
+        .ticker { display: flex; animation: ticker 25s linear infinite; white-space: nowrap; }
         .ticker-item { padding: 0 50px; font-weight: 800; font-family: 'Rajdhani'; font-size: 1.5rem; text-transform: uppercase; }
         @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
@@ -142,7 +127,6 @@
         .grid-services {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
         }
-
         .service-card {
             background: #0a0a0a; padding: 40px; border: 1px solid #333;
             transition: 0.4s; position: relative; overflow: hidden;
@@ -153,13 +137,15 @@
         .service-card h3 { font-size: 1.5rem; margin-bottom: 10px; color: #fff; }
         .service-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
 
-        /* --- PORTFOLIO --- */
+        /* --- PORTFOLIO (MODIFIÉ) --- */
         #portfolio { padding: 100px 5%; background: var(--bg-color); }
         .gallery-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
         }
         .gallery-item {
-            height: 350px; background: #222; position: relative; overflow: hidden; border-radius: 4px; cursor: pointer;
+            /* Changement ici pour format Portrait/Reels */
+            height: 600px; 
+            background: #222; position: relative; overflow: hidden; border-radius: 8px; cursor: pointer;
         }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; opacity: 0.7; }
         .gallery-item:hover img { transform: scale(1.1); opacity: 1; }
@@ -175,7 +161,6 @@
             background: radial-gradient(circle at center, #111, #000);
             border-top: 1px solid #222;
         }
-
         .audit-container {
             max-width: 1000px; margin: 0 auto;
             background: rgba(20, 20, 20, 0.8);
@@ -184,8 +169,6 @@
             padding: 60px;
             position: relative;
         }
-        
-        /* Coins lumineux */
         .audit-container::before {
             content: ''; position: absolute; top: -1px; left: -1px; width: 50px; height: 50px;
             border-top: 3px solid var(--accent); border-left: 3px solid var(--accent);
@@ -194,12 +177,10 @@
             content: ''; position: absolute; bottom: -1px; right: -1px; width: 50px; height: 50px;
             border-bottom: 3px solid var(--accent); border-right: 3px solid var(--accent);
         }
-
         .audit-header { text-align: center; margin-bottom: 50px; }
         .audit-header h2 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
         .audit-header p { color: var(--text-muted); }
 
-        /* Badge 48h */
         .delay-badge {
             display: inline-block; margin-top: 20px; padding: 10px 20px;
             background: rgba(0, 255, 136, 0.1); border: 1px solid var(--accent);
@@ -208,14 +189,11 @@
         }
         @keyframes pulseBadge { 0% { box-shadow: 0 0 0 0 rgba(0,255,136, 0.2); } 70% { box-shadow: 0 0 0 10px rgba(0,255,136, 0); } 100% { box-shadow: 0 0 0 0 rgba(0,255,136, 0); } }
 
-        .benakick-form {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 30px;
-        }
+        .benakick-form { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
         .form-group { display: flex; flex-direction: column; gap: 10px; }
         .form-group.full { grid-column: 1 / -1; }
 
         label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 700; }
-        
         input, select, textarea {
             background: #050505; border: 1px solid #333; padding: 15px;
             color: #fff; font-family: 'Poppins'; outline: none; transition: 0.3s;
@@ -224,7 +202,6 @@
             border-color: var(--accent); box-shadow: 0 0 15px rgba(0, 255, 136, 0.1);
         }
 
-        /* BOUTON HERO & SUBMIT */
         .btn-action {
             display: inline-block; padding: 15px 40px; background: var(--accent); color: #000;
             font-family: 'Rajdhani'; font-weight: 800; font-size: 1.2rem;
@@ -232,18 +209,25 @@
             cursor: pointer; transition: 0.3s;
             clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
         }
-        
-        .btn-action:hover {
-            background: #fff; transform: translateY(-2px); box-shadow: 0 0 30px var(--accent-glow);
-        }
-
+        .btn-action:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 0 30px var(--accent-glow); }
         .btn-submit { margin-top: 20px; width: 100%; grid-column: 1 / -1; }
 
         /* FOOTER */
-        footer { padding: 50px 5%; text-align: center; border-top: 1px solid #222; color: #555; font-size: 0.8rem; }
+        #main-footer {
+            padding: 60px 5%; text-align: center; border-top: 1px solid #222;
+            background-color: #050505; position: relative; z-index: 9999; 
+        }
         .socials-footer { margin-bottom: 20px; }
-        .socials-footer a { color: #fff; font-size: 1.5rem; margin: 0 10px; transition: 0.3s; }
-        .socials-footer a:hover { color: var(--accent); }
+        .socials-footer a {
+            color: #fff; font-size: 1.5rem; margin: 0 15px; transition: 0.3s; display: inline-block;
+        }
+        .socials-footer a:hover { color: var(--accent); transform: translateY(-3px); }
+        .legal-link {
+            color: #555; text-decoration: none; font-size: 0.75rem; font-family: 'Poppins', sans-serif;
+            text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;
+            display: inline-block; padding: 10px; cursor: pointer !important;
+        }
+        .legal-link:hover { color: var(--accent) !important; text-shadow: 0 0 10px rgba(0, 255, 136, 0.4); }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -287,16 +271,16 @@
 
     <div class="ticker-wrap">
         <div class="ticker">
-            <div class="ticker-item">⚡ BENAKICK AGENCY</div>
-            <div class="ticker-item">⚡ PLAYER MANAGEMENT</div>
-            <div class="ticker-item">⚡ CONTENT CREATION</div>
-            <div class="ticker-item">⚡ SPONSORING DEALS</div>
-            <div class="ticker-item">⚡ VIRAL STRATEGY</div>
-            <div class="ticker-item">⚡ BENAKICK AGENCY</div>
-            <div class="ticker-item">⚡ PLAYER MANAGEMENT</div>
-            <div class="ticker-item">⚡ CONTENT CREATION</div>
-            <div class="ticker-item">⚡ SPONSORING DEALS</div>
-            <div class="ticker-item">⚡ VIRAL STRATEGY</div>
+            <div class="ticker-item">⚡ AGENCE BENAKICK</div>
+            <div class="ticker-item">🛡️ GESTION D'IMAGE</div>
+            <div class="ticker-item">📸 CRÉATION DE CONTENU</div>
+            <div class="ticker-item">💸 CONTRATS SPONSORS</div>
+            <div class="ticker-item">📈 STRATÉGIE VIRALE</div>
+            <div class="ticker-item">⚽ AGENCE BENAKICK</div>
+            <div class="ticker-item">✨ GESTION D'IMAGE</div>
+            <div class="ticker-item">🔥 CRÉATION DE CONTENU</div>
+            <div class="ticker-item">💎 CONTRATS SPONSORS</div>
+            <div class="ticker-item">🚀 STRATÉGIE VIRALE</div>
         </div>
     </div>
 
@@ -327,7 +311,8 @@
     </section>
 
     <section id="portfolio">
-        <h2 class="section-title" style="color: #000;">HIGHLIGHTS <span>DU MOIS</span></h2>
+        <h2 class="section-title">HIGHLIGHTS <span>DU MOIS</span></h2>
+        
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=600" alt="Stade">
@@ -405,9 +390,10 @@
             </form>
         </div>
     </section>
-<footer id="main-footer">
+
+    <footer id="main-footer">
         <div class="socials-footer">
-            <a href="//www.instagram.com/benakick//" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-tiktok"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
         </div>
@@ -419,54 +405,5 @@
             </a>
         </p>
     </footer>
-
-    <style>
-        #main-footer {
-            padding: 60px 5%;
-            text-align: center;
-            border-top: 1px solid #222;
-            background-color: #050505; /* Assure que le fond est opaque */
-            
-            /* ESSENTIEL : Ces 2 lignes permettent de rendre le lien cliquable */
-            position: relative;
-            z-index: 9999; 
-        }
-
-        .socials-footer {
-            margin-bottom: 20px;
-        }
-
-        .socials-footer a {
-            color: #fff;
-            font-size: 1.5rem;
-            margin: 0 15px;
-            transition: 0.3s;
-            display: inline-block;
-        }
-
-        .socials-footer a:hover {
-            color: #00ff88;
-            transform: translateY(-3px);
-        }
-
-        .legal-link {
-            color: #555;
-            text-decoration: none;
-            font-size: 0.75rem;
-            font-family: 'Poppins', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-            display: inline-block;
-            padding: 10px; /* Agrandit la zone de clic */
-            cursor: pointer !important; /* Force l'apparition de la main */
-        }
-
-        .legal-link:hover {
-            color: #00ff88 !important;
-            text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
-        }
-    </style>
+</body>
 </html>
-
-
